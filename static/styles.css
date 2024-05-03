@@ -55,17 +55,30 @@ header .container {
     padding: 0.5em 1.5em;
     gap: 0.5em;
     color: var(--font-light);
+    flex: 0 1 25%;
+    width: auto;
+    height: 100%;
+}
+
+.logo-image-container {
+    margin: auto;
+    width: 50px;
+    height: 100%;
+    display: flex;
+
 }
 
 .logo-icon {
-    font-size: 2em;
-    margin: auto;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .logo-text {
     margin: auto;
     font-size: 1.5em;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 nav {
@@ -100,11 +113,11 @@ nav {
 .language {
     display: flex;
     gap: 10px;
-    padding: 0 2em;
+    padding: 1em;
     margin: auto 0;
     width: 50%;
-    justify-items: end;
-    flex: 0 1 10%;
+    justify-content: end;
+    flex: 0 1 25%;
 }
 
 .language-link {
@@ -143,7 +156,7 @@ footer .container {
     color: var(--font-light);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     .navigation-links {
         display: none;
         flex-direction: column;
@@ -156,13 +169,13 @@ footer .container {
         justify-content: center;
         top: 4em;
         left: 0;
+        box-shadow: 0 7px 15px 10px #88878759;
     }
 
     nav {
         display: flex;
         justify-items: end;
     }
-
 
     .navigation-links li {
         margin: auto;
@@ -208,6 +221,10 @@ footer .container {
 
     }
 
+
+}
+
+@media (max-width: 600px) {
     .language {
         padding: 0.5em;
         gap: 5px;
