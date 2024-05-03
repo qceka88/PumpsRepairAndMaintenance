@@ -225,6 +225,15 @@ footer .container {
 }
 
 @media (max-width: 600px) {
+    #navBtn {
+        width: 30px;
+        height: 30px;
+    }
+
+    #navBtn span {
+        font-size: 1.3em;
+    }
+
     .language {
         padding: 0.5em;
         gap: 5px;
