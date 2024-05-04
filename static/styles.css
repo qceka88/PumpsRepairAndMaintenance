@@ -39,6 +39,7 @@ body {
     margin: 0 auto;
 }
 
+/* Header Section  & Navigation Bar */
 header {
     background-color: var(--prime);
     width: 100%;
@@ -130,6 +131,7 @@ nav {
     color: var(--font-light);
 }
 
+/* Main settings */
 
 main,
 main div.container {
@@ -140,7 +142,7 @@ main div.container {
 }
 
 main div.container section {
-    display: none;
+    display: flex;
     flex-direction: column;
     text-align: center;
     width: 100%;
@@ -165,6 +167,99 @@ h1, h3 {
 }
 
 
+/* Hero Section */
+#home {
+    background-image: url("images/hero-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+
+}
+
+.hero-information {
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 9px 6px #88878759;
+    border-radius: 3em;
+    background-color: rgba(175, 175, 175, 0.15);
+    width: 100%;
+}
+
+.hero-information h3,
+.hero-information h1 {
+    color: var(--font-light);
+}
+
+
+.hero-information h1 {
+    font-size: 3.5em;
+}
+
+.hero-information h3 {
+    font-size: 2em;
+}
+
+/* TODO: Finish hero-header */
+
+/* Services Section */
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.service-card {
+    padding: 2em;
+    border: 3px solid var(--prime);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 9px 6px #88878759;
+    border-radius: 3em;
+    background-color: rgba(175, 175, 175, 0.15);
+    color: #000c34;
+    display: flex;
+    gap: 2em;
+}
+
+.image-service-container {
+    display: flex;
+    width: 100%;
+    flex: 1 1 60%;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.image-service-container > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.service-information-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    flex: 1 1 auto;
+}
+
+.service-information-container > h1 {
+    font-size: 2em;
+}
+
+.service-information-container > p {
+    font-size: 1.2em;
+}
+
+/* Clients Section */
+
+/*TODO: Write CSS for Clients Section*/
+
+
+/* Pricing Section */
 .section-wrapper table {
     padding: 5em;
     border: 3px solid var(--prime);
@@ -229,16 +324,7 @@ tr > *:nth-of-type(3) {
     width: 20%;
 }
 
-#home {
-    background-image: url("images/hero-page.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.active {
-    display: flex !important;
-}
-
+/* Footer Section*/
 footer {
     background-color: var(--prime);
     display: flex;
@@ -273,10 +359,7 @@ footer .container {
 }
 
 @media (max-width: 750px) {
-    html {
-        height: auto;
-    }
-
+    /* Navigation Bar Section */
     .logo-wrapper {
         flex: 1 0 auto;
     }
@@ -338,7 +421,7 @@ footer .container {
         border: 1px solid var(--second);
         justify-content: center;
         background-color: #e3e2e2;
-        box-shadow: 0.5px 1px 0px 1px #acacac;
+        box-shadow: 0.5px 1px 0 1px #acacac;
     }
 
     #navBtn span {
@@ -348,7 +431,7 @@ footer .container {
     }
 
     #navBtn:hover {
-        box-shadow: 0px 0 6px 3px #acacac80;
+        box-shadow: 0 0 6px 3px #acacac80;
     }
 
     #navBtn:active {
@@ -363,7 +446,7 @@ footer .container {
     }
 
     main div.container section {
-        padding: 2em 1em;
+        padding: 2em 1.5em;
     }
 
     .section-wrapper > h1 {
@@ -406,6 +489,7 @@ footer .container {
         width: 100%;
     }
 
+    /* Navigation Bar Section */
     #navBtn {
         width: 30px;
         height: 30px;
@@ -420,10 +504,29 @@ footer .container {
         gap: 5px;
     }
 
+    /*  Service Section */
+    .service-card {
+        flex-direction: column-reverse;
+        border-radius: 1.5em;
+        border-width: 2px;
+        gap: 1em;
+    }
+
+    .service-information-container > h1 {
+        font-size: 1.5em;
+    }
+
+    .service-information-container > p {
+        font-size: 0.9em;
+    }
+
+
+    /*  Pricing Section */
     #pricing {
         padding: 1em;
     }
 
+    /*  footer Section */
     footer {
         height: auto;
     }
