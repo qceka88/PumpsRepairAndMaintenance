@@ -19,12 +19,15 @@
 
 html {
     font: var(--font-size)/1.5 "Inter", serif;
+    width: 100%;
+    height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 }
 
 .container {
@@ -146,14 +149,25 @@ main section {
 footer {
     background-color: var(--prime);
     display: flex;
+    height: 3em;
 }
 
 footer .container {
     display: flex;
-    margin: 0 auto;
+    margin: auto;
     width: 100%;
     justify-content: space-between;
     color: var(--font-light);
+}
+
+.creator {
+    border-bottom: 1px solid var(--font-light);
+}
+
+.creator a {
+    text-decoration: none;
+    color: var(--font-light);
+
 }
 
 @media (max-width: 750px) {
