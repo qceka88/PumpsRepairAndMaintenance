@@ -178,7 +178,7 @@ h1, h3 {
 }
 
 .hero-information {
-
+    border: 2px solid rgba(211, 211, 211, 0.3);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 9px 6px #88878759;
     border-radius: 3em;
@@ -522,6 +522,8 @@ footer .container {
 
     .hero-information {
         margin: auto;
+        border-radius: 2em;
+        border: 2px solid rgba(211, 211, 211, 0.3);
     }
 
     .hero-information h1 {
