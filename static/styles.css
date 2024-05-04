@@ -27,6 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
     height: 100%;
 }
 
@@ -46,9 +47,9 @@ header {
 
 header .container {
     justify-content: space-between;
-    height: auto;
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
+    height: 100%;
 }
 
 .logo-link {
@@ -136,20 +137,37 @@ main div.container {
     height: 100%;
 }
 
-main section {
+main div.container section {
     display: none;
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-wrapper > h1,
+.section-wrapper > h3 {
+    padding: 0.5em 2em;
+}
+
+#pricing {
+    padding: 0 5em;
+}
+
+.section-wrapper table {
+    padding: 1em;
+    border: 1px solid red;
+    width: 100%;
 }
 
 .active {
-    display: flex;
+    display: flex !important;
 }
 
 footer {
     background-color: var(--prime);
     display: flex;
-    height: 3em;
+    height: auto;
 }
 
 footer .container {
@@ -160,17 +178,22 @@ footer .container {
     color: var(--font-light);
 }
 
-.creator {
-    border-bottom: 1px solid var(--font-light);
+.footer-wrapper p {
+    padding: 1em 2em;
 }
 
 .creator a {
     text-decoration: none;
     color: var(--font-light);
+    border-bottom: 1px solid var(--font-light);
 
 }
 
 @media (max-width: 750px) {
+    body {
+        height: auto;
+    }
+
     .navigation-links {
         display: none;
         flex-direction: column;
@@ -181,7 +204,7 @@ footer .container {
         height: auto;
         padding: 1em;
         justify-content: center;
-        top: 4em;
+        top: 3.5em;
         left: 0;
         box-shadow: 0 7px 15px 10px #88878759;
     }
@@ -198,6 +221,7 @@ footer .container {
         height: 100%;
         padding: 0.3em;
     }
+
 
     .section-link {
         color: var(--font-dark);
@@ -239,6 +263,11 @@ footer .container {
 }
 
 @media (max-width: 600px) {
+    .container {
+        display: flex;
+        width: 100%;
+    }
+
     #navBtn {
         width: 30px;
         height: 30px;
@@ -253,8 +282,21 @@ footer .container {
         gap: 5px;
     }
 
-    .container {
-        display: flex;
-        width: 100%;
+    #pricing {
+        padding: 1em;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5em 0;
+    }
+
+    .footer-wrapper p {
+        padding: 0;
     }
 }
