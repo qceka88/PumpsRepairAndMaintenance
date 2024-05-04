@@ -7,23 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>PumpsRepair - Martin Rusev</title>
-    <link rel="shortcut icon" href="static/images/favicon/wrench2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/images/logos/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-    <header>
+    <header class="sticky-top-nav">
         <div class="container">
-            <a href="#" class="logo-link">
-                <div class="logo-image-container">
-                    <img src="static/images/favicon/wrench.png" class="logo-icon" alt="logo">
-                </div>
-                <p class="logo-text">Martin Rusev</p>
-            </a>
+            <div class="logo-wrapper">
+                <a href="#" class="logo-link">
+                    <div class="logo-image-container">
+                        <img src="static/images/logos/logo.png" class="logo-icon" alt="logo">
+                    </div>
+                    <p class="logo-text">Martin Rusev</p>
+                </a>
+            </div>
+
             <nav>
-                <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse">
+                <button id="navBtn" class="navbar-toggler">
                     <span class="fa fa-bars"></span>
                 </button>
                 <ul class="navigation-links">
@@ -45,24 +47,12 @@
     <main>
         <div class="container">
             <section id="home" class="section-wrapper">
-                <h1>Home</h1>
-
+                <h1>Martin Rusev</h1>
                 <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur atque delectus
                     enim excepturi in itaque minus, obcaecati, officiis pariatur possimus quas quia reiciendis repellat
                     sed sequi sunt voluptatibus!</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus esse, facilis nisi nostrum nulla
-                    quis sed. Enim, eos exercitationem fugiat impedit in incidunt ipsum, quaerat quisquam ratione
-                    recusandae repudiandae velit!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus esse, facilis nisi nostrum nulla
-                    quis sed. Enim, eos exercitationem fugiat impedit in incidunt ipsum, quaerat quisquam ratione
-                    recusandae repudiandae velit!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus esse, facilis nisi nostrum nulla
-                    quis sed. Enim, eos exercitationem fugiat impedit in incidunt ipsum, quaerat quisquam ratione
-                    recusandae repudiandae velit!</p>
-                recusandae repudiandae velit!</p>
             </section>
-            <section id="services" class="section-wrapper">
+            <section id="services" class="section-wrapper active">
                 <h1>Services</h1>
                 <h3>-- Our Services --</h3>
                 <div class="services-wrapper">
@@ -76,7 +66,12 @@
                         <h1>Service 2</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum dolore,
                             dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam quis
-                            repellendus sequi sint soluta velit?</p>
+                            repellendus sequi sint soluta velit? Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Accusamus at beatae debitis dolorem nobis. A aperiam assumenda beatae earum fugit
+                            magni nemo, officiis quam quas qui quia quisquam tempore vel. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. A alias amet animi dolore eaque enim ex facere impedit
+                            incidunt iure molestiae, nesciunt optio pariatur porro quibusdam quis sequi, tenetur,
+                            voluptatem?</p>
                     </div>
                     <div class="service-card">
                         <h1>Service 3</h1>
@@ -90,65 +85,47 @@
                             dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam quis
                             repellendus sequi sint soluta velit?</p>
                     </div>
-                    <div class="service-card">
-                        <h1>Service 5</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum dolore,
-                            dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam quis
-                            repellendus sequi sint soluta velit?</p>
-                    </div>
-                    <div class="service-card">
-                        <h1>Service 5</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum dolore,
-                            dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam quis
-                            repellendus sequi sint soluta velit?</p>
-                    </div>
                 </div>
             </section>
             <section id="clients" class="section-wrapper">
                 <h1>Clients</h1>
                 <h3>-- Our Client --</h3>
             </section>
-            <section id="pricing" class="section-wrapper active">
+            <section id="pricing" class="section-wrapper">
                 <h1>Pricing</h1>
                 <h3>-- Pricing list --</h3>
                 <table>
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>2</th>
-                        <th>3</th>
+                        <th>Description</th>
                         <th>Price</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Lorem</td>
-                        <td>A</td>
-                        <td>A</td>
+                        <td>Lorem 1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
                         <td>1.00</td>
                     </tr>
                     <tr>
-                        <td>Lorem</td>
-                        <td>A</td>
-                        <td>A</td>
+                        <td>Lorem 2</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
                         <td>1.00</td>
                     </tr>
                     <tr>
-                        <td>Lorem</td>
-                        <td>A</td>
-                        <td>A</td>
+                        <td>Lorem 3</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
                         <td>1.00</td>
                     </tr>
                     <tr>
-                        <td>Lorem</td>
-                        <td>A</td>
-                        <td>A</td>
+                        <td>Lorem 4</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
                         <td>1.00</td>
                     </tr>
                     <tr>
-                        <td>Lorem</td>
-                        <td>A</td>
-                        <td>A</td>
+                        <td>Lorem 5</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
                         <td>1.00</td>
                     </tr>
                     </tbody>

@@ -8,7 +8,7 @@
     --font-size: 15px;
     --font-dark: #000001;
     --font-light: white;
-    --border-color: #b6b6b6;
+    --border-color: #a8a8a8;
 }
 
 * {
@@ -20,20 +20,22 @@
 html {
     font: var(--font-size)/1.5 "Inter", serif;
     width: 100%;
-    height: 100%;
+    height: auto;
+    background-color: rgb(239, 245, 254);
 }
 
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    min-height: auto;
 }
 
 .container {
     display: flex;
     max-width: 1200px;
+    width: 1200px;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -59,7 +61,7 @@ header .container {
     padding: 0.5em 1.5em;
     gap: 0.5em;
     color: var(--font-light);
-    flex: 0 1 25%;
+    flex: 0 1 auto;
     width: auto;
     height: 100%;
 }
@@ -143,21 +145,94 @@ main div.container section {
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    height: auto;
+    padding: 3em 5em 5em;
 }
 
-.section-wrapper > h1,
+h1, h3 {
+    color: #08558b;
+}
+
+.section-wrapper > h1 {
+    font-size: 3em;
+    line-height: 1;
+    padding-bottom: 1rem;
+}
+
 .section-wrapper > h3 {
-    padding: 0.5em 2em;
+    font-size: 1.5em;
+    padding-bottom: 3rem;
 }
 
-#pricing {
-    padding: 0 5em;
-}
 
 .section-wrapper table {
-    padding: 1em;
-    border: 1px solid red;
+    padding: 5em;
+    border: 3px solid var(--prime);
     width: 100%;
+    height: auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 9px 6px #88878759;
+    border-radius: 3em;
+    background-color: rgba(175, 175, 175, 0.15);
+    color: #000c34;
+    display: flex;
+    flex-direction: column;
+}
+
+tbody, thead {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+thead {
+    color: #08558b;
+}
+
+tr {
+    display: flex;
+    border-bottom: 1px solid #000c34;
+    padding-bottom: 0.2em;
+    margin: 0.3em 0.5em;
+    width: 100%;
+    height: auto;
+}
+
+tbody > tr:nth-of-type(1n) {
+    background-color: rgb(220 254 255 / 22%);
+}
+
+table thead > tr,
+tbody tr:nth-of-type(2n) {
+    background-color: rgba(72, 150, 226, 0.22);
+}
+
+
+tr > * {
+    border-right: 1px solid #08237d;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0.2em 1.5em;
+    width: 100%;
+    height: auto;
+    text-align: start;
+    vertical-align: middle;
+    margin: auto 0;
+}
+
+tr > *:nth-of-type(1) {
+    width: 30%;
+}
+
+tr > *:nth-of-type(3) {
+    width: 20%;
+}
+
+#home {
+    background-image: url("images/hero-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .active {
@@ -168,6 +243,7 @@ footer {
     background-color: var(--prime);
     display: flex;
     height: auto;
+    box-shadow: 1px -9px 9px 2px #88878759;
 }
 
 footer .container {
@@ -189,9 +265,32 @@ footer .container {
 
 }
 
+@media (min-width: 751px) {
+    .navigation-links {
+        display: flex;
+    }
+
+}
+
 @media (max-width: 750px) {
-    body {
+    html {
         height: auto;
+    }
+
+    .logo-wrapper {
+        flex: 1 0 auto;
+    }
+
+    .logo-link {
+
+        justify-content: start;
+
+    }
+
+    .logo-text,
+    .logo-image-container {
+        margin: auto 0;
+
     }
 
     .navigation-links {
@@ -204,7 +303,7 @@ footer .container {
         height: auto;
         padding: 1em;
         justify-content: center;
-        top: 3.5em;
+        top: 4em;
         left: 0;
         box-shadow: 0 7px 15px 10px #88878759;
     }
@@ -212,6 +311,7 @@ footer .container {
     nav {
         display: flex;
         justify-items: end;
+        flex: 0 1 5%;
     }
 
     .navigation-links li {
@@ -243,7 +343,6 @@ footer .container {
 
     #navBtn span {
         font-size: 1.8em;
-
         color: var(--border-color);
         margin: auto;
     }
@@ -259,7 +358,46 @@ footer .container {
 
     }
 
+    .language {
+        flex: 0 1 12%;
+    }
 
+    main div.container section {
+        padding: 2em 1em;
+    }
+
+    .section-wrapper > h1 {
+        font-size: 2em;
+        line-height: 1;
+        padding-bottom: 1rem;
+    }
+
+    .section-wrapper > h3 {
+        font-size: 1.2em;
+        padding-bottom: 1.5rem;
+    }
+
+    .section-wrapper table {
+        border-radius: 1.5em;
+        padding: 1em;
+        border: 2px solid var(--prime);
+    }
+
+    tr {
+        margin: 0.3em 0;
+    }
+
+    tr > * {
+        padding: 0.2em;
+    }
+
+    tr > *:nth-of-type(1) {
+        width: 20%;
+    }
+
+    tr > *:nth-of-type(3) {
+        width: 20%;
+    }
 }
 
 @media (max-width: 600px) {
