@@ -6,13 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>PumpsRepair - Martin Rusev</title>
+    <title>Hydrophore - Martin Rusev</title>
     <link rel="shortcut icon" href="static/images/logos/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="static/styles.css">
 </head>
-<body>
+<body class="bulgarian-language active"></body>
+<body class="bulgarian-language">
     <header class="sticky-top-nav">
         <div class="container">
             <div class="logo-wrapper">
@@ -23,7 +24,6 @@
                     <p class="logo-text">Martin Rusev</p>
                 </a>
             </div>
-
             <nav>
                 <button id="navBtn" class="navbar-toggler">
                     <span class="fa fa-bars"></span>
@@ -133,35 +133,81 @@
                     <tr>
                         <td>Lorem 1</td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00</td>
+                        <td>1.00$</td>
                     </tr>
                     <tr>
                         <td>Lorem 2</td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00</td>
+                        <td>1.00$</td>
                     </tr>
                     <tr>
                         <td>Lorem 3</td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00</td>
+                        <td>1.00$</td>
                     </tr>
                     <tr>
                         <td>Lorem 4</td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00</td>
+                        <td>1.00$</td>
                     </tr>
                     <tr>
                         <td>Lorem 5</td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00</td>
+                        <td>1.00$</td>
                     </tr>
                     </tbody>
                 </table>
             </section>
             <section id="contacts" class="section-wrapper">
                 <h1>Contacts</h1>
-                <h2>Phone:</h2>
-                <p>+359888 xx xx xx</p>
+                <h3>-- Contact us --</h3>
+                <div class="contacts-container">
+                    <div class="phone-container">
+                        <div class="text-phone-wrap">
+                            <h4>Phone:</h4>
+                            <h3 id="my-number">+359888 xx xx xx</h3>
+                        </div>
+                        <a href="tel:0889110846">
+                            <div class="text-phone-wrap">
+                                <h4>Call:</h4>
+                            </div>
+                            <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <a href="viber://chat/?number=0889110846">
+                            <div class="text-phone-wrap">
+                                <h4>Viber:</h4>
+                                <i class="fab fa-viber fa-2x" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="email-map-wrapper">
+                        <div class="email-container">
+                            <h3>Have a question?<br>Please Contact Us!</h3>
+                            <form>
+                                <input type="text" class="input-field" id="name" placeholder="Your Name">
+                                <label for="name">Your Name</label>
+
+                                <input type="email" class="input-field" id="email" placeholder="Your Email">
+                                <label for="email">Your Email</label>
+
+                                <input type="text" class="input-field" id="subject" placeholder="Subject">
+                                <label for="subject">Subject</label>
+
+                                <textarea class="input-field text-area-element" placeholder="Leave a message here"
+                                          id="message"></textarea>
+                                <label for="message">Message</label>
+                                <a href="mailto:yanko.rashkov@gmail.com?from=examble@email.com?subject=Email Subject&body=Contents of email" class="send-email-button" type="submit">Send
+                                    Message</a>
+                            </form>
+                        </div>
+                        <div class="map-container">
+                            <iframe class="map-element"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19356.425507103566!2d27.891406126045162!3d43.20933018161212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a454751e94eedb%3A0x57ee9fb8a5ea89be!2sCenter%2C%20Varna%2C%20Bulgaria!5e1!3m2!1sen!2sbd!4v1714908291022!5m2!1sen!2sbd"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>

@@ -7,8 +7,11 @@
     --nav-menu: #f2f4f9;
     --font-size: 15px;
     --font-dark: #000001;
+    --font-dark-blue: #000c34;
+    --font-light-blue: #08558b;
     --font-light: white;
     --border-color: #a8a8a8;
+
 }
 
 * {
@@ -152,7 +155,7 @@ main div.container section {
 }
 
 h1, h3 {
-    color: #08558b;
+    color: var(--font-light-blue);
 }
 
 .section-wrapper > h1 {
@@ -219,7 +222,7 @@ h1, h3 {
     box-shadow: 0 0 9px 6px #88878759;
     border-radius: 3em;
     background-color: rgba(175, 175, 175, 0.15);
-    color: #000c34;
+    color: var(--font-dark-blue);
     display: flex;
     gap: 2em;
 }
@@ -269,7 +272,7 @@ h1, h3 {
     box-shadow: 0 0 9px 6px #88878759;
     border-radius: 3em;
     background-color: rgba(175, 175, 175, 0.15);
-    color: #000c34;
+    color: var(--font-dark-blue);
     display: flex;
     flex-direction: column;
 }
@@ -322,6 +325,144 @@ tr > *:nth-of-type(1) {
 
 tr > *:nth-of-type(3) {
     width: 20%;
+}
+
+/* Contacts Section */
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--prime);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 9px 6px #88878759;
+    border-radius: 3em;
+    background-color: rgba(175, 175, 175, 0.15);
+    color: var(--font-dark-blue);
+    padding: 5em;
+    gap: 3em;
+}
+
+.phone-container {
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #4896e2;
+}
+
+.phone-container h4 {
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+}
+
+.phone-container h3 {
+    font-size: 1.5em;
+}
+
+.phone-container a {
+    text-decoration: none;
+
+}
+
+.phone-container i,
+.phone-container h3,
+.phone-container .text-phone-wrap {
+    color: #08558b;
+}
+
+.email-map-wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 2em;
+}
+
+.email-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex: 1 1 auto;
+    box-shadow: 0 0 9px 6px #88878759;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+    background-color: #eef4fe;
+    border: 1px solid #C7DCFB;
+}
+
+.email-container h3 {
+    font-size: 1.5em;
+}
+
+.email-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+form label {
+    display: none;
+}
+
+.input-field {
+    display: flex;
+    width: 100%;
+    height: calc(3.5rem + 2px);
+    flex: 1 1 48%;
+    padding: 1rem .75rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #C7DCFB;
+    appearance: none;
+    border-radius: 8px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-area-element {
+    resize: vertical;
+    flex: 1 0 100%;
+    min-height: 100px;
+    height: auto;
+}
+
+.input-field:focus {
+    color: #8D8E92;
+    background-color: #fff;
+    border-color: #82b1fd;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(4, 99, 250, 0.25)
+}
+
+.send-email-button {
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 1.375rem 1.75rem;
+    width: 100%;
+    background-color: var(--prime);
+    color: var(--font-light);
+    border-radius: .5em;
+}
+
+.send-email-button:hover {
+    background-color: #216bb0;
+    box-shadow: 0 0 0 .25rem rgba(4, 99, 250, 0.25)
+}
+
+/*  MAP */
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    flex: 1 1 auto;
+    box-shadow: 0 0 9px 6px #88878759;
+}
+
+.map-element {
+    width: 100%;
+    height: 100%;
 }
 
 /* Footer Section*/

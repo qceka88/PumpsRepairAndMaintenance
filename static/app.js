@@ -22,3 +22,7 @@ navBtnElement.addEventListener('click', (event) => {
         hideMenu();
     }
 });
+
+window.addEventListener('scroll', (event) => {
+
+})
