@@ -12,293 +12,606 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="static/styles.css">
 </head>
-<body class="bulgarian-language active"></body>
-<body class="bulgarian-language">
-    <header class="sticky-top-nav">
-        <div class="container">
-            <div class="logo-wrapper">
-                <a href="#" class="logo-link">
-                    <div class="logo-image-container">
-                        <img src="static/images/logos/logo.png" class="logo-icon" alt="logo">
+<body>
+    <div id="bg" class="selection-language-container active">
+        <header class="sticky-top-nav">
+            <div class="container">
+                <div class="logo-wrapper">
+                    <a href="#" class="logo-link">
+                        <div class="logo-image-container">
+                            <img src="static/images/logos/logo.png" class="logo-icon" alt="logo">
+                        </div>
+                        <p class="logo-text">Мартин Русев</p>
+                    </a>
+                </div>
+                <nav>
+                    <button id="navBtnBg" class="navbar-toggler">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <ul class="navigation-links">
+                        <li><a href="#homeBg" class="section-link">Начало</a></li>
+                        <li><a href="#servicesBg" class="section-link">Услуги</a></li>
+                        <li><a href="#clientsBg" class="section-link">Клиенти</a></li>
+                        <li><a href="#pricingBg" class="section-link">Цени</a></li>
+                        <li><a href="#about-usBg" class="section-link">За Нас</a></li>
+                        <li><a href="#contactsBg" class="section-link">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="language">
+                    <div class="button-language-wrapper">
+                        <button class="language-link selected">BG</button>
+                        <button class="language-link">EN</button>
                     </div>
-                    <p class="logo-text">Martin Rusev</p>
-                </a>
+                    <div class="flag-img">
+                        <img src="static/images/bg.png" alt="flag-image">
+                    </div>
+                </div>
             </div>
-            <nav>
-                <button id="navBtn" class="navbar-toggler">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <ul class="navigation-links">
-                    <li><a href="#home" class="section-link">Home</a></li>
-                    <li><a href="#services" class="section-link">Services</a></li>
-                    <li><a href="#clients" class="section-link">Clients</a></li>
-                    <li><a href="#pricing" class="section-link">Pricing</a></li>
-                    <li><a href="#about-us" class="section-link">About Us</a></li>
-                    <li><a href="#contacts" class="section-link">Contacts</a></li>
-                </ul>
-            </nav>
-            <div class="language">
-                <a href="#" class="language-link">BG</a>
-                <a href="#" class="language-link">EN</a>
+
+        </header>
+        <main>
+            <div class="container">
+                <section id="homeBg" class="section-wrapper">
+                    <div class="hero-information">
+                        <h1>Мартин Русев</h1>
+                        <h3>Начален текст, начален параграф. Аз обичам да ям баница и баница и още баница! Тя е толкова
+                            вкусна и хрупкава. Аз обичам и кафето, особено сутринта. После обикновено отивам на
+                            разходка, за да се разтеглям и да се подготвям за деня.</h3>
+                    </div>
+                </section>
+                <section id="servicesBg" class="section-wrapper">
+                    <h1>Услуги</h1>
+                    <h3>-- Нашите Услуги --</h3>
+                    <div class="services-wrapper">
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/build.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Build New</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/repair.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Repair</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/upgrade.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Upgrade</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/maintenance.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Maintenance</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="clientsBg" class="section-wrapper">
+                    <h1>Клиенти</h1>
+                    <h3>-- Нашите Клиенти --</h3>
+                    <div class="services-wrapper">
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/repair.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Доволен Клиент 1</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/upgrade.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Доволен Клиент 2</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/maintenance.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Happy client 3</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/build.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Happy client 4</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="pricingBg" class="section-wrapper">
+                    <h1>Pricing</h1>
+                    <h3>-- Pricing list --</h3>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Lorem 1</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem 2</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem 3</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem 4</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem 5</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="about-usBg" class="section-wrapper">
+                    <h1>About us</h1>
+                    <h3>-- More about us --</h3>
+                    <div class="services-wrapper">
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/about.jpeg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Martin Rusev</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="contactsBg" class="section-wrapper">
+                    <h1>Contacts</h1>
+                    <h3>-- Contact us --</h3>
+                    <div class="contacts-container">
+                        <div class="phone-container">
+                            <div class="text-phone-wrap">
+                                <h4>Phone:</h4>
+                                <h3 id="my-numberBg">+359888 xx xx xx</h3>
+                            </div>
+                            <div class="text-phone-wrap">
+                                <h4>Call:</h4>
+                                <a href="tel:0889110846">
+                                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="text-phone-wrap">
+                                <h4>Viber:</h4>
+                                <a href="viber://chat/?number=0889110846">
+                                    <i class="fab fa-viber fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="email-map-wrapper">
+                            <div class="email-container">
+                                <h3>Have a question?<br>Please Contact Us!</h3>
+                                <form>
+                                    <input type="text" class="input-field" id="nameBg" placeholder="Your Name">
+                                    <label for="nameBg">Your Name</label>
+
+                                    <input type="email" class="input-field" id="emailBg" placeholder="Your Email">
+                                    <label for="emailBg">Your Email</label>
+
+                                    <input type="text" class="input-field" id="subjectBg" placeholder="Subject">
+                                    <label for="subjectBg">Subject</label>
+
+                                    <textarea class="input-field text-area-element" placeholder="Leave a message here"
+                                              id="messageBg"></textarea>
+                                    <label for="messageBg">Message</label>
+                                    <a href="mailto:yanko.rashkov@gmail.com?from=examble@email.com?subject=Email Subject&body=Contents of email"
+                                       class="send-email-button" type="submit">Send
+                                        Message</a>
+                                </form>
+                            </div>
+                            <div class="map-container">
+                                <iframe class="map-element"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19356.425507103566!2d27.891406126045162!3d43.20933018161212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a454751e94eedb%3A0x57ee9fb8a5ea89be!2sCenter%2C%20Varna%2C%20Bulgaria!5e1!3m2!1sen!2sbd!4v1714908291022!5m2!1sen!2sbd"
+                                        allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-wrapper container">
+                <p>&copy; Martin Rusev - All rights reserved.</p>
+                <p class="creator">By <a href="https://yr-portoflio.onrender.com/" target="_blank"> Yanko Rashkov</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <div id="en" class="selection-language-container">
+        <header class="sticky-top-nav">
+            <div class="container">
+                <div class="logo-wrapper">
+                    <a href="#" class="logo-link">
+                        <div class="logo-image-container">
+                            <img src="static/images/logos/logo.png" class="logo-icon" alt="logo">
+                        </div>
+                        <p class="logo-text">Martin Rusev</p>
+                    </a>
+                </div>
+                <nav>
+                    <button id="navBtn" class="navbar-toggler">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <ul class="navigation-links">
+                        <li><a href="#home" class="section-link">Home</a></li>
+                        <li><a href="#services" class="section-link">Services</a></li>
+                        <li><a href="#clients" class="section-link">Clients</a></li>
+                        <li><a href="#pricing" class="section-link">Pricing</a></li>
+                        <li><a href="#about-us" class="section-link">About Us</a></li>
+                        <li><a href="#contacts" class="section-link">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="language">
+                    <div class="button-language-wrapper">
+                        <button class="language-link selected">BG</button>
+                        <button class="language-link">EN</button>
+                    </div>
+                    <div class="flag-img">
+                        <img src="static/images/bg.png" alt="flag-image">
+                    </div>
+                </div>
             </div>
 
-        </div>
+        </header>
+        <main>
+            <div class="container">
+                <section id="home" class="section-wrapper">
+                    <div class="hero-information">
+                        <h1>Martin Rusev</h1>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur atque
+                            delectus
+                            enim excepturi in itaque minus, obcaecati, officiis pariatur possimus quas quia reiciendis
+                            repellat
+                            sed sequi sunt voluptatibus!</h3>
+                    </div>
+                </section>
+                <section id="services" class="section-wrapper">
+                    <h1>Services</h1>
+                    <h3>-- Our Services --</h3>
+                    <div class="services-wrapper">
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/build.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Build New</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/repair.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Repair</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/upgrade.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Upgrade</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/maintenance.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Maintenance</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="clients" class="section-wrapper">
+                    <h1>Clients</h1>
+                    <h3>-- Our Client --</h3>
+                    <div class="services-wrapper">
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/repair.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Happy Client 1</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/upgrade.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Happy client 2</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/maintenance.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Happy client 3</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/services/build.jpg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Happy client 4</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="pricing" class="section-wrapper">
+                    <h1>Pricing</h1>
+                    <h3>-- Pricing list --</h3>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Lorem 1</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem 2</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem 3</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem 4</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem 5</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+                            <td>1.00$</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="about-us" class="section-wrapper">
+                    <h1>About us</h1>
+                    <h3>-- More about us --</h3>
+                    <div class="services-wrapper">
+                        <div class="service-card">
+                            <div class="image-service-container">
+                                <img src="static/images/about.jpeg" alt="build-img">
+                            </div>
+                            <div class="service-information-container">
+                                <h1>Martin Rusev</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                    dolore,
+                                    dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur
+                                    quibusdam
+                                    quis
+                                    repellendus sequi sint soluta velit?</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="contacts" class="section-wrapper">
+                    <h1>Contacts</h1>
+                    <h3>-- Contact us --</h3>
+                    <div class="contacts-container">
+                        <div class="phone-container">
+                            <div class="text-phone-wrap">
+                                <h4>Phone:</h4>
+                                <h3 id="my-number">+359888 xx xx xx</h3>
+                            </div>
+                            <div class="text-phone-wrap">
+                                <h4>Call:</h4>
+                                <a href="tel:0889110846">
+                                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="text-phone-wrap">
+                                <h4>Viber:</h4>
+                                <a href="viber://chat/?number=0889110846">
+                                    <i class="fab fa-viber fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="email-map-wrapper">
+                            <div class="email-container">
+                                <h3>Have a question?<br>Please Contact Us!</h3>
+                                <form>
+                                    <input type="text" class="input-field" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
 
-    </header>
-    <main>
-        <div class="container">
-            <section id="home" class="section-wrapper">
-                <div class="hero-information">
-                    <h1>Martin Rusev</h1>
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur atque
-                        delectus
-                        enim excepturi in itaque minus, obcaecati, officiis pariatur possimus quas quia reiciendis
-                        repellat
-                        sed sequi sunt voluptatibus!</h3>
-                </div>
-            </section>
-            <section id="services" class="section-wrapper">
-                <h1>Services</h1>
-                <h3>-- Our Services --</h3>
-                <div class="services-wrapper">
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/services/build.jpg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Build New</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/services/repair.jpg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Repair</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/services/upgrade.jpg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Upgrade</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/services/maintenance.jpg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Maintenance</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="clients" class="section-wrapper">
-                <h1>Clients</h1>
-                <h3>-- Our Client --</h3>
-                <div class="services-wrapper">
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/services/repair.jpg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Happy Client 1</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/services/upgrade.jpg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Happy client 2</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/services/maintenance.jpg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Happy client 3</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/services/build.jpg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Happy client 4</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="pricing" class="section-wrapper">
-                <h1>Pricing</h1>
-                <h3>-- Pricing list --</h3>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Lorem 1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00$</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem 2</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00$</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem 3</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00$</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem 4</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00$</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem 5</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                        <td>1.00$</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section id="about-us" class="section-wrapper">
-                <h1>About us</h1>
-                <h3>-- More about us --</h3>
-                <div class="services-wrapper">
-                    <div class="service-card">
-                        <div class="image-service-container">
-                            <img src="static/images/about.jpeg" alt="build-img">
-                        </div>
-                        <div class="service-information-container">
-                            <h1>Martin Rusev</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
-                                dolore,
-                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
-                                quis
-                                repellendus sequi sint soluta velit?</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="contacts" class="section-wrapper">
-                <h1>Contacts</h1>
-                <h3>-- Contact us --</h3>
-                <div class="contacts-container">
-                    <div class="phone-container">
-                        <div class="text-phone-wrap">
-                            <h4>Phone:</h4>
-                            <h3 id="my-number">+359888 xx xx xx</h3>
-                        </div>
-                        <div class="text-phone-wrap">
-                            <h4>Call:</h4>
-                            <a href="tel:0889110846">
-                                <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="text-phone-wrap">
-                            <h4>Viber:</h4>
-                            <a href="viber://chat/?number=0889110846">
-                                <i class="fab fa-viber fa-2x" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="email-map-wrapper">
-                        <div class="email-container">
-                            <h3>Have a question?<br>Please Contact Us!</h3>
-                            <form>
-                                <input type="text" class="input-field" id="name" placeholder="Your Name">
-                                <label for="name">Your Name</label>
+                                    <input type="email" class="input-field" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
 
-                                <input type="email" class="input-field" id="email" placeholder="Your Email">
-                                <label for="email">Your Email</label>
+                                    <input type="text" class="input-field" id="subject" placeholder="Subject">
+                                    <label for="subject">Subject</label>
 
-                                <input type="text" class="input-field" id="subject" placeholder="Subject">
-                                <label for="subject">Subject</label>
-
-                                <textarea class="input-field text-area-element" placeholder="Leave a message here"
-                                          id="message"></textarea>
-                                <label for="message">Message</label>
-                                <a href="mailto:yanko.rashkov@gmail.com?from=examble@email.com?subject=Email Subject&body=Contents of email"
-                                   class="send-email-button" type="submit">Send
-                                    Message</a>
-                            </form>
-                        </div>
-                        <div class="map-container">
-                            <iframe class="map-element"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19356.425507103566!2d27.891406126045162!3d43.20933018161212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a454751e94eedb%3A0x57ee9fb8a5ea89be!2sCenter%2C%20Varna%2C%20Bulgaria!5e1!3m2!1sen!2sbd!4v1714908291022!5m2!1sen!2sbd"
-                                    allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <textarea class="input-field text-area-element" placeholder="Leave a message here"
+                                              id="message"></textarea>
+                                    <label for="message">Message</label>
+                                    <a href="mailto:yanko.rashkov@gmail.com?from=examble@email.com?subject=Email Subject&body=Contents of email"
+                                       class="send-email-button" type="submit">Send
+                                        Message</a>
+                                </form>
+                            </div>
+                            <div class="map-container">
+                                <iframe class="map-element"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19356.425507103566!2d27.891406126045162!3d43.20933018161212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a454751e94eedb%3A0x57ee9fb8a5ea89be!2sCenter%2C%20Varna%2C%20Bulgaria!5e1!3m2!1sen!2sbd!4v1714908291022!5m2!1sen!2sbd"
+                                        allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
-    </main>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-wrapper container">
+                <p>&copy; Martin Rusev - All rights reserved.</p>
+                <p class="creator">By <a href="https://yr-portoflio.onrender.com/" target="_blank"> Yanko Rashkov</a>
+                </p>
+            </div>
+        </footer>
+    </div>
     <button class="back-to-top"><i class="fa fa-chevron-up"></i></button>
-    <footer>
-        <div class="footer-wrapper container">
-            <p>&copy; Martin Rusev - All rights reserved.</p>
-            <p class="creator">By <a href="https://yr-portoflio.onrender.com/" target="_blank"> Yanko Rashkov</a></p>
-        </div>
-    </footer>
-
 </body>
 <script src="static/app.js"></script>
 </html>

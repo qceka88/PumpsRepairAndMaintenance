@@ -32,7 +32,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: auto;
+}
+
+.selection-language-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.active {
+    display: flex;
 }
 
 .container {
@@ -99,7 +108,7 @@ nav {
     margin: auto;
 }
 
-#navBtn {
+#navBtn, #navBtnBg {
     display: none;
 }
 
@@ -113,6 +122,7 @@ nav {
 .section-link {
     text-decoration: none;
     color: var(--font-light);
+    white-space: nowrap;
 }
 
 .sticky-top-nav {
@@ -126,13 +136,47 @@ nav {
     gap: 10px;
     padding: 1em;
     margin: auto 0;
-    width: 50%;
+    width: 100%;
+    height: auto;
     justify-content: end;
     flex: 0 1 25%;
+
+}
+
+.button-language-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
 }
 
 .language-link {
     color: var(--font-light);
+    background-color: var(--prime);
+    border: none;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.flag-img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex: 0 1 50%;
+}
+
+.flag-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.selected {
+    background-color: #3e86cb;
+    border: 1px solid #ffffff;
 }
 
 /* Main settings */
@@ -172,7 +216,7 @@ h1, h3 {
 
 
 /* Hero Section */
-#home {
+#home, #homeBg {
     background-image: url("images/hero-page.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -567,14 +611,14 @@ footer .container {
 
 }
 
-@media (min-width: 751px) {
+@media (min-width: 861px) {
     .navigation-links {
         display: flex;
     }
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 860px) {
     /* Navigation Bar Section */
     .logo-wrapper {
         flex: 1 0 auto;
@@ -628,7 +672,7 @@ footer .container {
         border-bottom: 1px solid var(--border-color);
     }
 
-    #navBtn {
+    #navBtn, #navBtnBg {
         display: flex;
         margin: auto 0 auto auto;
         width: 35px;
@@ -640,19 +684,19 @@ footer .container {
         box-shadow: 0.5px 1px 0 1px #797979;
     }
 
-    #navBtn span {
+    #navBtn span, #navBtnBg span {
         font-size: 1.8em;
         color: var(--font-light);
         margin: auto;
     }
 
-    #navBtn:hover {
+    #navBtn:hover, #navBtnBg:hover {
         transition: 0.2s ease-in-out;
         background-color: #a3bace;
         box-shadow: 0.5px 1px 0 1px #676767;
     }
 
-    #navBtn:active {
+    #navBtn:active, #navBtnBg:active {
         background-color: #c2d7ee;
         transition: 0.3s ease-in-out;
         transform: translate(1px);
@@ -660,7 +704,17 @@ footer .container {
     }
 
     .language {
-        flex: 0 1 12%;
+        flex: 0 1 15%;
+        flex-direction: column;
+        height: auto;
+        padding: 0.2em;
+        gap: 0.2em
+
+    }
+
+    .flag-img img {
+        width: 45px;
+        margin: 0 auto;
     }
 
     main div.container section {
@@ -728,12 +782,12 @@ footer .container {
     }
 
     /* Navigation Bar Section */
-    #navBtn {
+    #navBtn, #navBtnBg {
         width: 30px;
         height: 30px;
     }
 
-    #navBtn span {
+    #navBtn span, #navBtnBg span {
         font-size: 1.3em;
     }
 
@@ -742,8 +796,12 @@ footer .container {
         gap: 5px;
     }
 
+    .flag-img img {
+        width: 30px;
+    }
+
     /* Hero Section*/
-    #home {
+    #home, #homeBg {
         width: 100%;
         height: 350px;
     }
@@ -780,7 +838,7 @@ footer .container {
 
 
     /*  Pricing Section */
-    #pricing {
+    #pricing, #pricingBg {
         padding: 1em;
     }
 
@@ -803,7 +861,7 @@ footer .container {
 
     }
 
-    #my-number {
+    #my-number, #my-numberBg {
         font-size: 1.3em;
     }
 
