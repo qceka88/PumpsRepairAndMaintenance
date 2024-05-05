@@ -33,6 +33,7 @@
                     <li><a href="#services" class="section-link">Services</a></li>
                     <li><a href="#clients" class="section-link">Clients</a></li>
                     <li><a href="#pricing" class="section-link">Pricing</a></li>
+                    <li><a href="#about-us" class="section-link">About Us</a></li>
                     <li><a href="#contacts" class="section-link">Contacts</a></li>
                 </ul>
             </nav>
@@ -56,7 +57,7 @@
                         sed sequi sunt voluptatibus!</h3>
                 </div>
             </section>
-            <section id="services" class="section-wrapper active">
+            <section id="services" class="section-wrapper">
                 <h1>Services</h1>
                 <h3>-- Our Services --</h3>
                 <div class="services-wrapper">
@@ -117,6 +118,60 @@
             <section id="clients" class="section-wrapper">
                 <h1>Clients</h1>
                 <h3>-- Our Client --</h3>
+                <div class="services-wrapper">
+                    <div class="service-card">
+                        <div class="image-service-container">
+                            <img src="static/images/services/repair.jpg" alt="build-img">
+                        </div>
+                        <div class="service-information-container">
+                            <h1>Happy Client 1</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                dolore,
+                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
+                                quis
+                                repellendus sequi sint soluta velit?</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="image-service-container">
+                            <img src="static/images/services/upgrade.jpg" alt="build-img">
+                        </div>
+                        <div class="service-information-container">
+                            <h1>Happy client 2</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                dolore,
+                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
+                                quis
+                                repellendus sequi sint soluta velit?</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="image-service-container">
+                            <img src="static/images/services/maintenance.jpg" alt="build-img">
+                        </div>
+                        <div class="service-information-container">
+                            <h1>Happy client 3</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                dolore,
+                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
+                                quis
+                                repellendus sequi sint soluta velit?</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="image-service-container">
+                            <img src="static/images/services/build.jpg" alt="build-img">
+                        </div>
+                        <div class="service-information-container">
+                            <h1>Happy client 4</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                dolore,
+                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
+                                quis
+                                repellendus sequi sint soluta velit?</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="pricing" class="section-wrapper">
                 <h1>Pricing</h1>
@@ -158,6 +213,30 @@
                     </tbody>
                 </table>
             </section>
+            <section id="about-us" class="section-wrapper">
+                <h1>About us</h1>
+                <h3>-- More about us --</h3>
+                <div class="services-wrapper">
+                    <div class="service-card">
+                        <div class="image-service-container">
+                            <img src="static/images/about.jpeg" alt="build-img">
+                        </div>
+                        <div class="service-information-container">
+                            <h1>Martin Rusev</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                dolore,
+                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
+                                quis
+                                repellendus sequi sint soluta velit?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque, cum
+                                dolore,
+                                dolores doloribus et, eum excepturi expedita laboriosam libero neque pariatur quibusdam
+                                quis
+                                repellendus sequi sint soluta velit?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="contacts" class="section-wrapper">
                 <h1>Contacts</h1>
                 <h3>-- Contact us --</h3>
@@ -167,18 +246,18 @@
                             <h4>Phone:</h4>
                             <h3 id="my-number">+359888 xx xx xx</h3>
                         </div>
-                        <a href="tel:0889110846">
-                            <div class="text-phone-wrap">
-                                <h4>Call:</h4>
-                            </div>
-                            <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                        </a>
-                        <a href="viber://chat/?number=0889110846">
-                            <div class="text-phone-wrap">
-                                <h4>Viber:</h4>
+                        <div class="text-phone-wrap">
+                            <h4>Call:</h4>
+                            <a href="tel:0889110846">
+                                <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="text-phone-wrap">
+                            <h4>Viber:</h4>
+                            <a href="viber://chat/?number=0889110846">
                                 <i class="fab fa-viber fa-2x" aria-hidden="true"></i>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                     <div class="email-map-wrapper">
                         <div class="email-container">
@@ -196,7 +275,8 @@
                                 <textarea class="input-field text-area-element" placeholder="Leave a message here"
                                           id="message"></textarea>
                                 <label for="message">Message</label>
-                                <a href="mailto:yanko.rashkov@gmail.com?from=examble@email.com?subject=Email Subject&body=Contents of email" class="send-email-button" type="submit">Send
+                                <a href="mailto:yanko.rashkov@gmail.com?from=examble@email.com?subject=Email Subject&body=Contents of email"
+                                   class="send-email-button" type="submit">Send
                                     Message</a>
                             </form>
                         </div>
@@ -211,12 +291,14 @@
             </section>
         </div>
     </main>
+    <button class="back-to-top"><i class="fa fa-chevron-up"></i></button>
     <footer>
         <div class="footer-wrapper container">
             <p>&copy; Martin Rusev - All rights reserved.</p>
             <p class="creator">By <a href="https://yr-portoflio.onrender.com/" target="_blank"> Yanko Rashkov</a></p>
         </div>
     </footer>
+
 </body>
 <script src="static/app.js"></script>
 </html>
