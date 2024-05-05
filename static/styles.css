@@ -6,6 +6,7 @@
     --second: #fdfdfe;
     --nav-menu: #f2f4f9;
     --font-size: 15px;
+    --small-font: 13px;
     --font-dark: #000001;
     --font-dark-blue: #000c34;
     --font-light-blue: #08558b;
@@ -56,7 +57,7 @@ body {
 header {
     background-color: var(--prime);
     width: 100%;
-    height: 4em;
+    height: auto;
     box-shadow: 0 7px 9px 2px #88878759;
     display: flex;
 }
@@ -65,7 +66,8 @@ header .container {
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
-    height: 100%;
+    height: auto;
+    font-size: 1.1em;
 }
 
 .logo-link {
@@ -82,7 +84,7 @@ header .container {
 
 .logo-image-container {
     margin: auto;
-    width: 50px;
+    width: 85px;
     height: 100%;
     display: flex;
 
@@ -115,9 +117,9 @@ nav {
 .navigation-links {
     display: flex;
     list-style-type: none;
-    gap: 2em;
     margin: auto;
 }
+
 
 .section-link {
     text-decoration: none;
@@ -230,8 +232,9 @@ h1, h3 {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 9px 6px #88878759;
     border-radius: 3em;
-    background-color: rgba(175, 175, 175, 0.15);
+    background-color: rgba(175, 175, 175, 0.30);
     width: 100%;
+    padding: 1em;
 }
 
 .hero-information h3,
@@ -580,6 +583,7 @@ footer .container {
     text-decoration: none;
     color: var(--font-light);
     border-bottom: 1px solid var(--font-light);
+    font-weight: 400;
 }
 
 .back-to-top {
@@ -614,14 +618,23 @@ footer .container {
 @media (min-width: 861px) {
     .navigation-links {
         display: flex;
+        justify-content: space-between;
+        flex: 1 1 auto;
     }
 
+    .navigation-links li {
+        margin: auto;
+    }
 }
 
 @media (max-width: 860px) {
     /* Navigation Bar Section */
     .logo-wrapper {
         flex: 1 0 auto;
+    }
+
+    header {
+        font-size: 0.8rem;
     }
 
     .logo-link {
@@ -633,7 +646,10 @@ footer .container {
     .logo-text,
     .logo-image-container {
         margin: auto 0;
+    }
 
+    .logo-image-container {
+        width: 65px;
     }
 
     .navigation-links {
@@ -773,6 +789,7 @@ footer .container {
     .map-element {
         min-height: 350px;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -865,18 +882,17 @@ footer .container {
         font-size: 1.3em;
     }
 
-    .text-phone-wrap:first-of-type {
-        gap: 0.5em;
-    }
-
+    .text-phone-wrap:last-of-type,
     .text-phone-wrap:nth-of-type(2) {
-        gap: 2.4em;
+        /*gap: 2.4em;*/
+        flex: 1 1 auto;
     }
 
     .text-phone-wrap {
         flex-direction: row;
-        margin: auto auto auto 0;
+        margin: 0;
         gap: 1.5em;
+        justify-content: space-between;
     }
 
     .text-phone-wrap h4 {
@@ -886,6 +902,7 @@ footer .container {
 
     .text-phone-wrap > a {
         padding: 0.7em;
+        flex: 0;
     }
 
     .text-phone-wrap > a > i {
@@ -945,4 +962,11 @@ footer .container {
     .back-to-top i {
         font-size: 1.5em;
     }
+}
+
+@media (max-width: 390px) {
+    html {
+        font: var(--small-font)/1.5 "Inter", serif;
+    }
+
 }
