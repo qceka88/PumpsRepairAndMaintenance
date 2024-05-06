@@ -430,7 +430,7 @@ tr > *:nth-of-type(3) {
     color: var(--font-light);
     border-radius: 0.3em;
     padding: 0.8em;
-    width: 100%;
+    width: 6em;
     height: 100%;
     display: flex;
     box-shadow: 2px 2px 0 0 #858484;
