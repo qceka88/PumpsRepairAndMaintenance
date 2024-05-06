@@ -58,3 +58,12 @@ languageBtnElements.forEach(languageBtn => {
         }
     })
 });
+
+function sendEmail(event) {
+    event.preventDefault();
+    const parentElement = event.currentTarget.closest('form');
+    const [name, email, description, message] = parentElement.querySelectorAll('.input-field')
+
+    const emailString = `mailto:no.reply.mymotomadness@gmail.com?subject=${name.value}:${description.value}&body=${message.value}`
+    window.open(emailString);
+}

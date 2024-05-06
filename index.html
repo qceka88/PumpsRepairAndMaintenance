@@ -278,8 +278,8 @@
                                               placeholder="Напишете вашето съобщените тука.."
                                               id="messageBg"></textarea>
                                     <label for="messageBg">Message</label>
-                                    <a href="mailto:yanko.rashkov@gmail.com?from=examble@email.com?subject=Email Subject&body=Contents of email"
-                                       class="send-email-button" type="submit">Изпрати съобщение</a>
+                                    <a href="#sendEmailBg" id="sendEmailBg"  onclick="sendEmail(event)"
+                                       class="send-email-button" type="submit"> Изпрати съобщение</a>
                                 </form>
                             </div>
                             <div class="map-container">
@@ -578,7 +578,7 @@
                                     <textarea class="input-field text-area-element" placeholder="Leave a message here"
                                               id="message"></textarea>
                                     <label for="message">Message</label>
-                                    <a href="mailto:yanko.rashkov@gmail.com?from=examble@email.com?subject=Email Subject&body=Contents of email"
+                                    <a href="#sendEmail" id="sendEmail"  onclick="sendEmail(event)"
                                        class="send-email-button" type="submit">Send
                                         Message</a>
                                 </form>
@@ -604,5 +604,6 @@
     </div>
     <button class="back-to-top"><i class="fa fa-chevron-up"></i></button>
 </body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="static/app.js"></script>
 </html>
