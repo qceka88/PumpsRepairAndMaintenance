@@ -10,7 +10,7 @@ navigationBtnElements.forEach(btnElement => {
         if (Array.from(navBtnElement).filter(e => e.style.display === 'flex').length > 0) {
             collapseMenu.forEach(e => e.style.display = 'none');
         }
-    })
+    });
 });
 
 navBtnElement.forEach(e => {
@@ -26,7 +26,7 @@ navBtnElement.forEach(e => {
             hideMenu();
         }
     });
-})
+});
 
 window.addEventListener('scroll', (event) => {
     if (event.currentTarget.scrollY >= 45) {
@@ -45,17 +45,16 @@ languageBtnElements.forEach(languageBtn => {
             const titleMap = {
                 'en': 'Hydrophore - Martin Rusev',
                 'bg': 'Хидрофори - Мартин Русев'
-            }
+            };
             document.querySelectorAll('.selected').forEach(e => e.classList.remove('selected'));
             const selectedLanguage = languageBtn.textContent.toLowerCase();
 
-            languageImageElement.forEach(e => e.src = `static/images/${selectedLanguage}.png`)
+            languageImageElement.forEach(e => e.src = `static/images/${selectedLanguage}.png`);
             document.querySelectorAll('.active').forEach(e => e.classList.remove('active'));
-            languageBtnElements.forEach(e => e.textContent.toLowerCase() === selectedLanguage ? e.classList.add('selected') : 1)
+            languageBtnElements.forEach(e => e.textContent.toLowerCase() === selectedLanguage ? e.classList.add('selected') : 1);
 
             document.querySelector('title').textContent = titleMap[selectedLanguage];
             document.getElementById(selectedLanguage).classList.add('active');
-
         }
     })
-})
+});
