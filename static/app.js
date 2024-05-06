@@ -7,7 +7,7 @@ const languageImageElement = document.querySelectorAll('.flag-img img');
 navigationBtnElements.forEach(btnElement => {
     btnElement.addEventListener('click', (event) => {
 
-        if (Array.from(navBtnElement).filter(e=> e.style.display === 'flex').length > 0) {
+        if (Array.from(navBtnElement).filter(e => e.style.display === 'flex').length > 0) {
             collapseMenu.forEach(e => e.style.display = 'none');
         }
     })
@@ -19,7 +19,7 @@ navBtnElement.forEach(e => {
             collapseMenu.forEach(e => e.style.display = 'none');
             collapseMenu.forEach(e => e.removeEventListener('click', hideMenu));
         };
-        if (Array.from(collapseMenu).filter(e=> e.style.display !== 'flex').length > 0) {
+        if (Array.from(collapseMenu).filter(e => e.style.display !== 'flex').length > 0) {
             collapseMenu.forEach(e => e.style.display = 'flex');
             collapseMenu.forEach(e => e.addEventListener('click', hideMenu));
         } else {
@@ -42,6 +42,10 @@ window.addEventListener('scroll', (event) => {
 languageBtnElements.forEach(languageBtn => {
     languageBtn.addEventListener('click', (event) => {
         if (!languageBtn.className.includes('selected')) {
+            const titleMap = {
+                'en': 'Hydrophore - Martin Rusev',
+                'bg': 'Хидрофори - Мартин Русев'
+            }
             document.querySelectorAll('.selected').forEach(e => e.classList.remove('selected'));
             const selectedLanguage = languageBtn.textContent.toLowerCase();
 
@@ -49,7 +53,7 @@ languageBtnElements.forEach(languageBtn => {
             document.querySelectorAll('.active').forEach(e => e.classList.remove('active'));
             languageBtnElements.forEach(e => e.textContent.toLowerCase() === selectedLanguage ? e.classList.add('selected') : 1)
 
-
+            document.querySelector('title').textContent = titleMap[selectedLanguage];
             document.getElementById(selectedLanguage).classList.add('active');
 
         }
