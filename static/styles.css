@@ -928,10 +928,11 @@ footer .container {
 
     .input-field {
         padding: 0.375rem 0.75rem;
+        height: calc(2.5rem + 2px);
     }
 
     .text-area-element {
-        min-height: 54px;
+        min-height: 74px;
     }
 
     .send-email-button {
