@@ -168,7 +168,7 @@ nav {
     width: 100%;
     height: auto;
     flex: 0 1 50%;
-    border-radius: 0.2em;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -176,6 +176,8 @@ nav {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 0.3em;
+
 }
 
 .selected {
@@ -373,9 +375,6 @@ tr > *:nth-of-type(1) {
     width: 30%;
 }
 
-tr > *:nth-of-type(3) {
-    width: 20%;
-}
 
 /* Contacts Section */
 .contacts-container {
@@ -735,7 +734,6 @@ footer .container {
 
     .flag-img img {
         width: 45px;
-        margin: 0 auto;
     }
 
     main div.container section {
@@ -781,9 +779,6 @@ footer .container {
         width: 25%;
     }
 
-    tr > *:nth-of-type(3) {
-        width: 20%;
-    }
 
     /*    Contacts Section  */
     .email-map-wrapper {
@@ -822,7 +817,8 @@ footer .container {
         width: 30px;
     }
 
-    /* Hero Section*/
+
+    /*Hero Section*/
     #home, #homeBg {
         width: 100%;
         height: auto;

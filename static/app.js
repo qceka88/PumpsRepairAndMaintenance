@@ -43,8 +43,8 @@ languageBtnElements.forEach(languageBtn => {
     languageBtn.addEventListener('click', (event) => {
         if (!languageBtn.className.includes('selected')) {
             const titleMap = {
-                'en': 'Hydrophore - Martin Rusev',
-                'bg': 'Хидрофори - Мартин Русев'
+                'en': 'M - A SERVICE Ltd.',
+                'bg': 'ЕМ-АЙ СЕРВИЗ ООД',
             };
             document.querySelectorAll('.selected').forEach(e => e.classList.remove('selected'));
             const selectedLanguage = languageBtn.textContent.toLowerCase();
@@ -64,6 +64,6 @@ function sendEmail(event) {
     const parentElement = event.currentTarget.closest('form');
     const [name, email, description, message] = parentElement.querySelectorAll('.input-field')
 
-    const emailString = `mailto:no.reply.mymotomadness@gmail.com?subject=${name.value}:${description.value}&body=${message.value}`
+    const emailString = `mailto:m-aservice@mail.bg?subject=${name.value}:${description.value}&body=${message.value}`
     window.open(emailString);
 }
