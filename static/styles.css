@@ -241,7 +241,7 @@ h1, h3 {
     padding: 1em;
     display: flex;
     flex-direction: column;
-    text-align: start;
+    text-align: center;
 }
 
 .hero-information h3,
@@ -254,21 +254,20 @@ h1, h3 {
     display: flex;
     justify-content: start;
     flex-direction: column;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     width: 100%;
-    margin-left: 6em;
-    padding: 2em 0;
+    padding: 1em 0;
+    list-style: none;
+
 }
 
 .hero-information li {
-    flex: 0 1 auto;
-    margin-left: 1em;
+    flex: 1 1 auto;
 }
 
 .hero-information h1 {
     font-size: 3.5em;
     width: 100%;
-    margin-left: 2em;
 }
 
 .hero-information ul li h3 {
@@ -276,7 +275,6 @@ h1, h3 {
 }
 
 .hero-information > h3 {
-    margin-left: 3em;
     font-size: 2em;
 }
 
@@ -667,9 +665,7 @@ footer .container {
     }
 
     .logo-link {
-
         justify-content: start;
-
     }
 
     .logo-text,
@@ -777,10 +773,6 @@ footer .container {
     }
 
     /* Hero Section*/
-    .hero-information {
-        text-align: center;
-    }
-
     .hero-information h1 {
         font-size: 3em;
     }
@@ -794,9 +786,7 @@ footer .container {
     .hero-information > h3 {
         margin: 0 auto;
     }
-    .hero-information > ul{
-        list-style: none;
-    }
+
     /* Pricing Section*/
     .section-wrapper table {
         border-radius: 1.5em;
