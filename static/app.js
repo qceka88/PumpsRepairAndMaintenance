@@ -5,6 +5,7 @@ const btnBackToTop = document.querySelector('.back-to-top');
 const languageBtnElements = document.querySelectorAll('.language-link');
 const languageImageElement = document.querySelectorAll('.flag-img img');
 const imagesContainerElements = document.querySelectorAll('.image-container');
+
 const modalContainer = document.querySelector('.modal-container');
 const modalImageElement = document.querySelector('.modal-image')
 const bodyElement = document.querySelector('body');
@@ -31,7 +32,13 @@ function controls(idx, someLength, leftBtn, rightBtn) {
     rightBtn.disabled = idx >= someLength - 1;
 }
 
-function addNavigationButtonListeners(leftBtn, rightBtn, images, currentIndex) {
+function modalImages(event) {
+    const [leftBtn, rightBtn] = document.querySelectorAll('.modal-wrapper > .control-button');
+    const parent = event.currentTarget.parentNode.parentNode;
+    const images = Array.from(parent.querySelectorAll('.image-container'));
+    const currentElement = images.find(e => e.children[0].src === event.currentTarget.children[0].src)
+    let currentIndex = images.indexOf(currentElement);
+
     leftBtn.addEventListener('click', (e) => {
         currentIndex--;
         modalImageElement.src = images[currentIndex].children[0].src;
@@ -43,26 +50,17 @@ function addNavigationButtonListeners(leftBtn, rightBtn, images, currentIndex) {
         modalImageElement.src = images[currentIndex].children[0].src;
         controls(currentIndex, images.length, leftBtn, rightBtn);
     });
+    controls(currentIndex, images.length, leftBtn, rightBtn);
+    console.log(currentElement.childNodes)
+    modalImageElement.src = event.currentTarget.children[0].src;
+    modalImageElement.addEventListener('click', zoomInZoomOut)
+    modalContainer.style.display = 'flex';
+    bodyElement.style.overflow = 'hidden';
 }
 
 imagesContainerElements.forEach(element => {
-    element.addEventListener('click', (event) => {
-        event.preventDefault()
-        const [leftBtn, rightBtn] = document.querySelectorAll('.modal-wrapper > .control-button');
-        const parent = event.currentTarget.parentNode;
-        const images = Array.from(parent.querySelectorAll('.image-container'));
-        const currentElement = images.find(e => e.children[0].src === event.currentTarget.children[0].src)
-        let currentIndex = images.indexOf(currentElement);
-
-        addNavigationButtonListeners(leftBtn, rightBtn, images, currentIndex)
-        controls(currentIndex, images.length, leftBtn, rightBtn);
-        modalImageElement.src = currentElement.children[0].src;
-        modalImageElement.addEventListener('click', zoomInZoomOut)
-        modalContainer.style.display = 'flex';
-        bodyElement.style.overflow = 'hidden';
-    });
+    element.addEventListener('click', modalImages);
 });
-
 navigationBtnElements.forEach(btnElement => {
     btnElement.addEventListener('click', (event) => {
 
@@ -72,8 +70,8 @@ navigationBtnElements.forEach(btnElement => {
     });
 });
 
-navBtnElement.forEach(e => {
-    e.addEventListener('click', (event) => {
+navBtnElement.forEach(element => {
+    element.addEventListener('click', (event) => {
         const hideMenu = () => {
             collapseMenu.forEach(e => e.style.display = 'none');
             collapseMenu.forEach(e => e.removeEventListener('click', hideMenu));
@@ -126,3 +124,50 @@ function sendEmail(event) {
     const emailString = `mailto:m-aservice@mail.bg?subject=${name.value}:${description.value}&body=${message.value}`
     window.open(emailString);
 }
+
+(function ($) {
+    "use strict";
+
+    // Testimonials carousel
+    $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        loop: true,
+        center: true,
+        dots: false,
+        nav: false,
+        page: true,
+        navText: [
+            '<i class="fa-solid fa-chevron-left"></i>',
+            '<i class="fa-solid fa-chevron-right"></i>'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 1
+            },
+            992: {
+                items: 1
+            }
+        }
+    });
+
+
+})(jQuery);
+
+
+// const wrapperContainers = document.querySelectorAll('.images-wrapper');
+//
+// wrapperContainers.forEach(wrapper => {
+//     const images = Array.from(wrapper.querySelectorAll('.image-container'));
+//
+//     setInterval((event) => {
+//         images.forEach(imgContainer => imgContainer.style.display = 'none');
+//
+//         const currentImage = images.shift();
+//         currentImage.style.display = 'flex';
+//         images.push(currentImage);
+//     }, 3000);
+// });
