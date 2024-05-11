@@ -404,7 +404,7 @@ h1, h3 {
     display: block;
     width: 100% !important;
     height: auto !important;
-    min-height: 200px;
+    min-height: 250px;
 }
 
 .service-information-container {
@@ -923,6 +923,16 @@ footer .container {
 }
 
 @media (max-width: 600px) {
+    .modal-container {
+        height: 100%;
+    }
+    .modal-container .modal-wrapper {
+        height: auto;
+    }
+    .image-container img {
+        min-height: 200px;
+    }
+
     .container {
         display: flex;
         width: 100%;
