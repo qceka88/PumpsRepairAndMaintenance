@@ -4,6 +4,65 @@ const navigationBtnElements = document.querySelectorAll('.section-link');
 const btnBackToTop = document.querySelector('.back-to-top');
 const languageBtnElements = document.querySelectorAll('.language-link');
 const languageImageElement = document.querySelectorAll('.flag-img img');
+const imagesContainerElements = document.querySelectorAll('.image-container');
+const modalContainer = document.querySelector('.modal-container');
+const modalImageElement = document.querySelector('.modal-image')
+const bodyElement = document.querySelector('body');
+const closeModalButton = document.querySelector('.close-modal');
+closeModalButton.addEventListener('click', (e) => {
+    modalContainer.style.display = 'none';
+    bodyElement.style.overflow = 'auto';
+    modalImageElement.removeEventListener('click', zoomInZoomOut)
+});
+
+function zoomInZoomOut(event) {
+    const currentElement = document.querySelector('.modal-image');
+    if (currentElement.style.scale === '1' || !currentElement.style.scale) {
+        currentElement.style.cursor = 'zoom-out';
+        currentElement.style.scale = '1.5';
+    } else if (currentElement.style.scale === '1.5') {
+        currentElement.style.cursor = 'zoom-in';
+        currentElement.style.scale = '1';
+    }
+}
+
+function controls(idx, someLength, leftBtn, rightBtn) {
+    leftBtn.disabled = idx <= 0;
+    rightBtn.disabled = idx >= someLength - 1;
+}
+
+function addNavigationButtonListeners(leftBtn, rightBtn, images, currentIndex) {
+    leftBtn.addEventListener('click', (e) => {
+        currentIndex--;
+        modalImageElement.src = images[currentIndex].children[0].src;
+        controls(currentIndex, images.length, leftBtn, rightBtn);
+    });
+
+    rightBtn.addEventListener('click', (e) => {
+        currentIndex++;
+        modalImageElement.src = images[currentIndex].children[0].src;
+        controls(currentIndex, images.length, leftBtn, rightBtn);
+    });
+}
+
+imagesContainerElements.forEach(element => {
+    element.addEventListener('click', (event) => {
+        event.preventDefault()
+        const [leftBtn, rightBtn] = document.querySelectorAll('.modal-wrapper > .control-button');
+        const parent = event.currentTarget.parentNode;
+        const images = Array.from(parent.querySelectorAll('.image-container'));
+        const currentElement = images.find(e => e.children[0].src === event.currentTarget.children[0].src)
+        let currentIndex = images.indexOf(currentElement);
+
+        addNavigationButtonListeners(leftBtn, rightBtn, images, currentIndex)
+        controls(currentIndex, images.length, leftBtn, rightBtn);
+        modalImageElement.src = currentElement.children[0].src;
+        modalImageElement.addEventListener('click', zoomInZoomOut)
+        modalContainer.style.display = 'flex';
+        bodyElement.style.overflow = 'hidden';
+    });
+});
+
 navigationBtnElements.forEach(btnElement => {
     btnElement.addEventListener('click', (event) => {
 
