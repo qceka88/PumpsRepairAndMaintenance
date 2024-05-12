@@ -199,10 +199,10 @@ function sendEmail(event) {
                 items: 1
             },
             768: {
-                items: 1
+                items: 2
             },
             992: {
-                items: 1
+                items: 3
             }
         }
     });
