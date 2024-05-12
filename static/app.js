@@ -196,7 +196,7 @@ function sendEmail(event) {
         ],
         responsive: {
             0: {
-                items: 1
+                items: 3
             },
             768: {
                 items: 2

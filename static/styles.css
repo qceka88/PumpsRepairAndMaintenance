@@ -930,7 +930,14 @@ footer .container {
     }
 
     .modal-container .modal-wrapper {
-        height: auto;
+        height: 100%;
+        margin: 2em auto;
+        width: auto;
+    }
+
+    .modal-wrapper .modal-image-container {
+        width: auto;
+        height: 100%;
     }
 
     .image-container img {
