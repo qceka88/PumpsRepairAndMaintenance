@@ -13,8 +13,15 @@ closeModalButton.addEventListener('click', (e) => {
     modalContainer.style.display = 'none';
     bodyElement.style.overflow = 'auto';
     modalImageElement.removeEventListener('click', zoomInZoomOut)
+    modalImageElement.removeEventListener('click', closeModalWindow);
 });
 
+function closeModalWindow(event) {
+    const forbiddenArea = Array.from(document.querySelectorAll('.modal-wrapper *'));
+    if (!forbiddenArea.includes(event.target)) {
+        closeModalButton.click();
+    }
+}
 
 function zoomInZoomOut(event) {
     const currentElement = document.querySelector('.modal-image');
@@ -62,52 +69,41 @@ function modalImages(event) {
     modalImageElement.src = event.currentTarget.children[0].src;
     modalImageElement.addEventListener('click', zoomInZoomOut);
 
-if (window.screen.width <= 850) {
-    modalImageElement.addEventListener('touchstart', (event) => {
-        const forbiddenArea = Array.from(document.querySelectorAll('.control-button'));
-        if (!forbiddenArea.includes(event.target)) {
-            let startTouchX = event.touches[0].clientX;
-            let totalSwipeDistance = 0;
+    if (window.screen.width <= 850) {
+        modalImageElement.addEventListener('touchstart', (event) => {
+            const forbiddenArea = Array.from(document.querySelectorAll('.control-button'));
+            if (!forbiddenArea.includes(event.target)) {
+                let startTouchX = event.touches[0].clientX;
 
-            function handleTouchMove(e) {
-                let currentTouchX = e.touches[0].clientX;
-                let swipeDistance = currentTouchX - startTouchX;
+                function handleTouchMove(e) {
+                    let currentTouchX = e.touches[0].clientX;
+                    let swipeDistance = currentTouchX - startTouchX;
 
-                totalSwipeDistance += Math.abs(swipeDistance);
+                    const threshold = 100;
 
-                console.log('CURRENT: ', currentTouchX);
-                console.log('Total Swipe Distance: ', totalSwipeDistance);
-
-                if (totalSwipeDistance >= 120) { // Adjust threshold as needed
-                    if (swipeDistance < 0) {
-                        leftBtn.click(); // Swipe to the left
-                    } else {
-                        rightBtn.click(); // Swipe to the right
+                    if (swipeDistance >= threshold) {
+                        leftBtn.click();
+                        startTouchX = currentTouchX;
+                    } else if (swipeDistance <= -threshold) {
+                        rightBtn.click();
+                        startTouchX = currentTouchX;
                     }
-                    startTouchX = currentTouchX;
-                    totalSwipeDistance = 0;
                 }
+
+                modalImageElement.addEventListener('touchmove', handleTouchMove);
+
+                modalImageElement.addEventListener('touchend', () => {
+
+                    modalImageElement.removeEventListener('touchmove', handleTouchMove);
+                });
             }
-
-            modalImageElement.addEventListener('touchmove', handleTouchMove);
-
-            modalImageElement.addEventListener('touchend', () => {
-
-                modalImageElement.removeEventListener('touchmove', handleTouchMove);
-            });
-        }
-    });
-}
+        });
+    }
 
 
     modalContainer.style.display = 'flex';
     bodyElement.style.overflow = 'hidden';
-    modalContainer.addEventListener('click', (event) => {
-        const forbiddenArea = Array.from(document.querySelectorAll('.modal-wrapper *'));
-        if (!forbiddenArea.includes(event.target)) {
-            closeModalButton.click();
-        }
-    });
+    modalContainer.addEventListener('click', closeModalWindow);
 }
 
 
@@ -122,15 +118,24 @@ navigationBtnElements.forEach(btnElement => {
 
 navBtnElement.forEach(element => {
     element.addEventListener('click', (event) => {
-        const hideMenu = () => {
+        const hideMenu = (e) => {
             collapseMenu.forEach(e => e.style.display = 'none');
             collapseMenu.forEach(e => e.removeEventListener('click', hideMenu));
         };
         if (Array.from(collapseMenu).filter(e => e.style.display !== 'flex').length > 0) {
             collapseMenu.forEach(e => e.style.display = 'flex');
             collapseMenu.forEach(e => e.addEventListener('click', hideMenu));
+            window.addEventListener('click', (e) => {
+                const area = Array.from(document.querySelectorAll('.section-link, .navbar-button-toggler, span.fa.fa-bars'));
+                console.log(area)
+                console.log(e.target)
+                console.log(!area.includes(e.target))
+                if (!area.includes(e.target)) {
+                    hideMenu();
+                }
+            })
         } else {
-            hideMenu();
+            hideMenu(event);
         }
     });
 });
