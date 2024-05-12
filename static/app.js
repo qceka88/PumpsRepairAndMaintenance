@@ -4,7 +4,6 @@ const navigationBtnElements = document.querySelectorAll('.section-link');
 const btnBackToTop = document.querySelector('.back-to-top');
 const languageBtnElements = document.querySelectorAll('.language-link');
 const languageImageElement = document.querySelectorAll('.flag-img img');
-const imagesContainerElements = document.querySelectorAll('.image-container');
 
 const modalContainer = document.querySelector('.modal-container');
 const modalImageElement = document.querySelector('.modal-image')
@@ -15,6 +14,7 @@ closeModalButton.addEventListener('click', (e) => {
     bodyElement.style.overflow = 'auto';
     modalImageElement.removeEventListener('click', zoomInZoomOut)
 });
+
 
 function zoomInZoomOut(event) {
     const currentElement = document.querySelector('.modal-image');
@@ -32,6 +32,7 @@ function controls(idx, someLength, leftBtn, rightBtn) {
     rightBtn.disabled = idx >= someLength - 1;
 }
 
+
 function modalImages(event) {
     const [leftBtn, rightBtn] = document.querySelectorAll('.modal-wrapper > .control-button');
     const parent = event.currentTarget.parentNode.parentNode;
@@ -39,28 +40,77 @@ function modalImages(event) {
     const currentElement = images.find(e => e.children[0].src === event.currentTarget.children[0].src)
     let currentIndex = images.indexOf(currentElement);
 
-    leftBtn.addEventListener('click', (e) => {
+    function moveLeft(e) {
         currentIndex--;
         modalImageElement.src = images[currentIndex].children[0].src;
         controls(currentIndex, images.length, leftBtn, rightBtn);
-    });
+    }
 
-    rightBtn.addEventListener('click', (e) => {
+    function moveRight(e) {
         currentIndex++;
         modalImageElement.src = images[currentIndex].children[0].src;
         controls(currentIndex, images.length, leftBtn, rightBtn);
-    });
+    }
+
+
+    leftBtn.addEventListener('click', moveLeft);
+    rightBtn.addEventListener('click', moveRight);
+
+
     controls(currentIndex, images.length, leftBtn, rightBtn);
-    console.log(currentElement.childNodes)
+
     modalImageElement.src = event.currentTarget.children[0].src;
-    modalImageElement.addEventListener('click', zoomInZoomOut)
-    modalContainer.style.display = 'flex';
-    bodyElement.style.overflow = 'hidden';
+    modalImageElement.addEventListener('click', zoomInZoomOut);
+
+if (window.screen.width <= 850) {
+    modalImageElement.addEventListener('touchstart', (event) => {
+        const forbiddenArea = Array.from(document.querySelectorAll('.control-button'));
+        if (!forbiddenArea.includes(event.target)) {
+            let startTouchX = event.touches[0].clientX;
+            let totalSwipeDistance = 0;
+
+            function handleTouchMove(e) {
+                let currentTouchX = e.touches[0].clientX;
+                let swipeDistance = currentTouchX - startTouchX;
+
+                totalSwipeDistance += Math.abs(swipeDistance);
+
+                console.log('CURRENT: ', currentTouchX);
+                console.log('Total Swipe Distance: ', totalSwipeDistance);
+
+                if (totalSwipeDistance >= 120) { // Adjust threshold as needed
+                    if (swipeDistance < 0) {
+                        leftBtn.click(); // Swipe to the left
+                    } else {
+                        rightBtn.click(); // Swipe to the right
+                    }
+                    startTouchX = currentTouchX;
+                    totalSwipeDistance = 0;
+                }
+            }
+
+            modalImageElement.addEventListener('touchmove', handleTouchMove);
+
+            modalImageElement.addEventListener('touchend', () => {
+
+                modalImageElement.removeEventListener('touchmove', handleTouchMove);
+            });
+        }
+    });
 }
 
-imagesContainerElements.forEach(element => {
-    element.addEventListener('click', modalImages);
-});
+
+    modalContainer.style.display = 'flex';
+    bodyElement.style.overflow = 'hidden';
+    modalContainer.addEventListener('click', (event) => {
+        const forbiddenArea = Array.from(document.querySelectorAll('.modal-wrapper *'));
+        if (!forbiddenArea.includes(event.target)) {
+            closeModalButton.click();
+        }
+    });
+}
+
+
 navigationBtnElements.forEach(btnElement => {
     btnElement.addEventListener('click', (event) => {
 
@@ -127,8 +177,6 @@ function sendEmail(event) {
 
 (function ($) {
     "use strict";
-
-    // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -156,18 +204,3 @@ function sendEmail(event) {
 
 
 })(jQuery);
-
-
-// const wrapperContainers = document.querySelectorAll('.images-wrapper');
-//
-// wrapperContainers.forEach(wrapper => {
-//     const images = Array.from(wrapper.querySelectorAll('.image-container'));
-//
-//     setInterval((event) => {
-//         images.forEach(imgContainer => imgContainer.style.display = 'none');
-//
-//         const currentImage = images.shift();
-//         currentImage.style.display = 'flex';
-//         images.push(currentImage);
-//     }, 3000);
-// });

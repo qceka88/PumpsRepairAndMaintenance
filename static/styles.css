@@ -926,9 +926,11 @@ footer .container {
     .modal-container {
         height: 100%;
     }
+
     .modal-container .modal-wrapper {
         height: auto;
     }
+
     .image-container img {
         min-height: 200px;
     }
@@ -939,6 +941,10 @@ footer .container {
     }
 
     /* Navigation Bar Section */
+    .navigation-links {
+        top: 4.8em;
+    }
+
     #navBtn, #navBtnBg {
         width: 30px;
         height: 30px;
