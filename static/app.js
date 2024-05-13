@@ -215,8 +215,8 @@ function sendEmail(event) {
 
 setInterval(() => {
     brandsBanner.forEach(row => {
-        const element = row.removeChild(row.children[0])
-        row.appendChild(element)
+        const element = row.removeChild(row.firstElementChild);
+        row.appendChild(element);
     })
 
 
