@@ -289,6 +289,7 @@ nav {
     height: 100%;
     padding: 0.5em;
     flex: 0 1 auto;
+    transition: transform 1s ease;
 }
 
 .brand-image {
@@ -1015,12 +1016,11 @@ footer .container {
 
     /* Brands Banner */
     .top-banner-brands {
-        height: 2.1em;
+        height: 2.3em;
     }
 
     .brands-container {
-        padding: 0.4em 0.1em;
-        flex-wrap: wrap;
+        padding: 0.3em 0.1em;
         width: 100%;
         height: auto;
     }
@@ -1028,8 +1028,8 @@ footer .container {
     .brand-image-container {
         width: auto;
         height: 100%;
-        flex: 0 1 10%;
-        padding: 0.1em;
+        flex: 0 1 auto;
+        padding: 0 0.5em;
     }
 
     .brand-image {

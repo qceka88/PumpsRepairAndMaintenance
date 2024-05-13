@@ -9,6 +9,9 @@ const modalContainer = document.querySelector('.modal-container');
 const modalImageElement = document.querySelector('.modal-image')
 const bodyElement = document.querySelector('body');
 const closeModalButton = document.querySelector('.close-modal');
+const brandsBanner = document.querySelectorAll('.top-banner-brands .brands-container');
+
+
 closeModalButton.addEventListener('click', (e) => {
     modalContainer.style.display = 'none';
     bodyElement.style.overflow = 'auto';
@@ -207,5 +210,14 @@ function sendEmail(event) {
         }
     });
 
-
 })(jQuery);
+
+
+setInterval(() => {
+    brandsBanner.forEach(row => {
+        const element = row.removeChild(row.children[0])
+        row.appendChild(element)
+    })
+
+
+}, 1800, "smooth");
