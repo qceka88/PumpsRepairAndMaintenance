@@ -199,7 +199,7 @@ nav {
 }
 
 
-.section-link {
+.section-shortcut-link {
     text-decoration: none;
     color: var(--font-light);
     white-space: nowrap;
@@ -394,13 +394,13 @@ h1, h3 {
 
 /* Services Section */
 
-.services-wrapper {
+.services-description-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
 }
 
-.service-card {
+.card {
     padding: 2em;
     border: 3px solid var(--prime);
     width: 100%;
@@ -571,7 +571,20 @@ tr > *:nth-of-type(1) {
     padding-bottom: 1em;
     border-bottom: 1px solid #4896e2;
     flex-wrap: wrap;
+    flex-direction: column;
 }
+
+.contacts-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.phone-email {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 .phone-container h4 {
     font-size: 1.2em;
@@ -589,17 +602,18 @@ tr > *:nth-of-type(1) {
 
 
 .phone-container h3,
-.phone-container .text-phone-wrap {
+.phone-container .text-contact-wrap {
     color: #08558b;
 }
 
-.text-phone-wrap {
+.text-contact-wrap {
     display: flex;
     flex-direction: column;
     margin: auto;
+
 }
 
-.text-phone-wrap > a {
+.text-contact-wrap > a {
     background-color: var(--prime);
     color: var(--font-light);
     border-radius: 0.3em;
@@ -610,20 +624,20 @@ tr > *:nth-of-type(1) {
     box-shadow: 2px 2px 0 0 #858484;
 }
 
-.text-phone-wrap > a:hover {
+.text-contact-wrap > a:hover {
     transition: 0.2s ease-in-out;
     background-color: #216bb0;
     box-shadow: 2px 2px 0 0 #858484;
 }
 
-.text-phone-wrap > a:active {
+.text-contact-wrap > a:active {
     background-color: var(--prime);
     transition: 0.3s ease-in-out;
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 .25rem rgba(4, 99, 250, 0.25);
 }
 
-.text-phone-wrap > a > i {
+.text-contact-wrap > a > i {
     margin: auto;
     font-size: 1.7em;
 }
@@ -869,7 +883,7 @@ footer .container {
     }
 
 
-    .section-link {
+    .section-shortcut-link {
         color: var(--font-dark);
         padding: 0.2em;
         border-bottom: 1px solid var(--border-color);
@@ -972,7 +986,11 @@ footer .container {
     }
 
     tr > *:nth-of-type(1) {
-        width: 25%;
+        flex: 1 0 40%;
+    }
+
+    tr > *:nth-of-type(2) {
+        flex: 0 1 auto;
     }
 
 
@@ -1087,7 +1105,7 @@ footer .container {
     }
 
     /*  Service Section */
-    .service-card {
+    .card {
         flex-direction: column-reverse;
         border-radius: 1.5em;
         border-width: 2px;
@@ -1133,30 +1151,31 @@ footer .container {
         font-size: 1.3em;
     }
 
-    .text-phone-wrap:last-of-type,
-    .text-phone-wrap:nth-of-type(2) {
+    .text-contact-wrap:last-of-type,
+    .text-contact-wrap:nth-of-type(2) {
         /*gap: 2.4em;*/
         flex: 1 1 auto;
     }
 
-    .text-phone-wrap {
+    .text-contact-wrap {
         flex-direction: row;
         margin: 0;
         gap: 1.5em;
         justify-content: space-between;
+            width: 100%;
     }
 
-    .text-phone-wrap h4 {
+    .text-contact-wrap h4 {
         margin: auto 0;
         padding: 0;
     }
 
-    .text-phone-wrap > a {
+    .text-contact-wrap > a {
         padding: 0.7em;
         flex: 0;
     }
 
-    .text-phone-wrap > a > i {
+    .text-contact-wrap > a > i {
         font-size: 1.3em;
     }
 

@@ -1,6 +1,6 @@
 const navBtnElement = document.querySelectorAll('#navBtn, #navBtnBg');
 const collapseMenu = document.querySelectorAll('.navigation-links');
-const navigationBtnElements = document.querySelectorAll('.section-link');
+const navigationBtnElements = document.querySelectorAll('.section-shortcut-link');
 const btnBackToTop = document.querySelector('.back-to-top');
 const languageBtnElements = document.querySelectorAll('.language-link');
 const languageImageElement = document.querySelectorAll('.flag-img img');
@@ -129,7 +129,7 @@ navBtnElement.forEach(element => {
             collapseMenu.forEach(e => e.style.display = 'flex');
             collapseMenu.forEach(e => e.addEventListener('click', hideMenu));
             window.addEventListener('click', (e) => {
-                const area = Array.from(document.querySelectorAll('.section-link, .navbar-button-toggler, span.fa.fa-bars'));
+                const area = Array.from(document.querySelectorAll('.section-shortcut-link, .navbar-button-toggler, span.fa.fa-bars'));
                 console.log(area)
                 console.log(e.target)
                 console.log(!area.includes(e.target))
