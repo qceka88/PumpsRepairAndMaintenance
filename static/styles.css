@@ -570,6 +570,7 @@ tr > *:nth-of-type(1) {
     justify-content: center;
     padding-bottom: 1em;
     border-bottom: 1px solid #4896e2;
+    flex-wrap: wrap;
 }
 
 .phone-container h4 {
@@ -985,6 +986,9 @@ footer .container {
         min-height: 350px;
     }
 
+    .phone-container {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1116,7 +1120,7 @@ footer .container {
 
     .phone-container {
         justify-content: start;
-        flex-direction: column;
+
         gap: 1em;
     }
 

@@ -174,15 +174,6 @@ languageBtnElements.forEach(languageBtn => {
     })
 });
 
-function sendEmail(event) {
-    event.preventDefault();
-    const parentElement = event.currentTarget.closest('form');
-    const [name, email, description, message] = parentElement.querySelectorAll('.input-field')
-
-    const emailString = `mailto:m-aservice@mail.bg?subject=${name.value}:${description.value}&body=${message.value}`
-    window.open(emailString);
-}
-
 (function ($) {
     "use strict";
     $(".testimonial-carousel").owlCarousel({
