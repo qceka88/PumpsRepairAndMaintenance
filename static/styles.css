@@ -391,7 +391,6 @@ h1, h3 {
     font-size: 2em;
 }
 
-/* TODO: Finish hero-header */
 
 /* Services Section */
 
@@ -461,9 +460,30 @@ h1, h3 {
     font-size: 1.2em;
 }
 
-/* Clients Section */
+#servicesBg .image-container,
+#servicesEn .image-container {
+    display: flex;
+    flex: 0 1 50%;
+    justify-content: center;
+}
 
-/*TODO: Write CSS for Clients Section*/
+#servicesBg .image-container img,
+#servicesEn .image-container img {
+    width: 100%;
+    margin: auto;
+}
+
+#servicesBg .service-information-container,
+#servicesEn .service-information-container {
+    flex: 0 1 auto;
+}
+
+#servicesBg .service-information-container > h1,
+#servicesEn .service-information-container > h1 {
+    display: none;
+}
+
+/* Clients Section */
 
 
 /* Pricing Section */
