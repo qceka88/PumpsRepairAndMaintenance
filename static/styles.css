@@ -480,7 +480,7 @@ h1, h3 {
 
 #servicesBg .service-information-container > h1,
 #servicesEn .service-information-container > h1 {
-    display: none;
+    line-height: 2em;
 }
 
 /* Clients Section */
