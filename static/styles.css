@@ -1102,7 +1102,7 @@ footer .container {
     .hero-information {
         margin: auto;
         border-radius: 2em;
-        border: 2px solid rgba(211, 211, 211, 0.3);
+        /*border: 2px solid rgba(211, 211, 211, 0.3);*/
     }
 
     .hero-information ul {
