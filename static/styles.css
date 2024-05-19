@@ -345,9 +345,9 @@ h1, h3 {
     padding-bottom: 3rem;
 }
 
-
+/* Hero Section */
 #home, #homeBg {
-    position: relative; /* Ensure the element is positioned relative to its normal position */
+    position: relative;
     background-image: url("images/hero-page.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -382,15 +382,7 @@ h1, h3 {
     z-index: 2;
 }
 
-/* Hero Section */
-/*#home, #homeBg {*/
-/*    background-image: url("images/hero-page.jpg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    width: 100%;*/
-/*    height: auto;*/
 
-/*}*/
 .hero-information {
     /*border: 2px solid rgba(211, 211, 211, 0.3);*/
     /*backdrop-filter: blur(1px);*/
@@ -594,6 +586,23 @@ tr > *:nth-of-type(1) {
     width: 30%;
 }
 
+/* About us */
+
+
+#about-us .service-information-container,
+#about-usBg .service-information-container {
+    flex: 1 1 auto;
+}
+
+#about-us .image-container,
+#about-usBg .image-container {
+    flex: 0 1 50%;
+}
+
+#about-us .image-container img,
+#about-usBg .image-container img {
+    margin: auto;
+}
 
 /* Contacts Section */
 .contacts-container {
@@ -683,9 +692,11 @@ tr > *:nth-of-type(1) {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 .25rem rgba(4, 99, 250, 0.25);
 }
-.text-contact-wrap h4{
+
+.text-contact-wrap h4 {
     font-weight: 600;
 }
+
 .text-contact-wrap > a > i {
     margin: auto;
     font-size: 1.7em;
@@ -1289,6 +1300,7 @@ footer .container {
     .creator .new-row {
         display: none;
     }
+
     .back-to-top {
         width: 40px;
         height: 40px;
