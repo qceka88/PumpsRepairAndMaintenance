@@ -83,7 +83,9 @@ function modalImages(event) {
                     let swipeDistance = currentTouchX - startTouchX;
 
                     const threshold = 100;
-
+                    if (modalImageElement.style.scale === '1.5') {
+                        return;
+                    }
                     if (swipeDistance >= threshold) {
                         leftBtn.click();
                         startTouchX = currentTouchX;
