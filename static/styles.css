@@ -271,6 +271,7 @@ nav {
     box-shadow: 0 7px 9px 2px #88878759;
     width: 100%;
     height: 3.2em;
+    overflow: hidden;
 }
 
 .brands-container {
@@ -280,7 +281,18 @@ nav {
     height: auto;
     padding: 0 2em;
     justify-content: center;
+    transition: transform 5s ease;
+    /*animation: scroll 15s linear infinite;*/
 }
+
+/*@keyframes scroll {*/
+/*    0% {*/
+/*        transform: translateX(0);*/
+/*    }*/
+/*    100% {*/
+/*        transform: translateX(-100%);*/
+/*    }*/
+/*}*/
 
 .brand-image-container {
     display: flex;
@@ -289,7 +301,7 @@ nav {
     height: 100%;
     padding: 0.5em;
     flex: 0 1 auto;
-    transition: transform 1s ease;
+    transition: transform 5s ease;
 }
 
 .brand-image {
@@ -334,15 +346,51 @@ h1, h3 {
 }
 
 
-/* Hero Section */
 #home, #homeBg {
+    position: relative; /* Ensure the element is positioned relative to its normal position */
     background-image: url("images/hero-page.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
-
+    height: 600px;
 }
+
+#home, #homeBg {
+    position: relative;
+    background-image: url("images/hero-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+
+#home::before, #homeBg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+#home > *, #homeBg > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero Section */
+/*#home, #homeBg {*/
+/*    background-image: url("images/hero-page.jpg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+
+/*}*/
 .hero-information {
     /*border: 2px solid rgba(211, 211, 211, 0.3);*/
     /*backdrop-filter: blur(1px);*/
@@ -635,7 +683,9 @@ tr > *:nth-of-type(1) {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 .25rem rgba(4, 99, 250, 0.25);
 }
-
+.text-contact-wrap h4{
+    font-weight: 600;
+}
 .text-contact-wrap > a > i {
     margin: auto;
     font-size: 1.7em;

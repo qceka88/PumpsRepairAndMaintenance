@@ -200,15 +200,13 @@ languageBtnElements.forEach(languageBtn => {
             }
         }
     });
-
 })(jQuery);
 
 
 setInterval(() => {
     brandsBanner.forEach(row => {
-        const element = row.removeChild(row.firstElementChild);
-        row.appendChild(element);
+        const currentElement = row.firstElementChild;
+        row.appendChild(currentElement);
+
     })
-
-
-}, 1800, "smooth");
+}, 1300, "smooth");
