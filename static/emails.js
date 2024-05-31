@@ -9,10 +9,10 @@ function sendEmail(event) {
         'phoneBg': 'Моля попълнете вашият телефон.',
         'emailBg': 'Моля попълнете вашата поща.',
         'messageBg': 'Моля напишете вашето съобщение.',
-        'name': 'Please fill your name.',
-        'phone': 'Please fill your phone.',
-        'email': 'Please fill your email',
-        'message': 'Please fill your message',
+        'nameEn': 'Please fill your name.',
+        'phoneEn': 'Please fill your phone.',
+        'emailEn': 'Please fill your email',
+        'messageEn': 'Please fill your message',
     }
     event.preventDefault();
     const parentElement = event.currentTarget.closest('form');
@@ -47,7 +47,7 @@ function sendEmail(event) {
             console.log('FAILED...', error);
             if (name.id === 'nameBg'){
                 alert('Неуспешно изпращане, моля опитайне отново!');
-            }else {
+            }else {c
                  alert('Failed to send email. Please try again!');
             }
 
