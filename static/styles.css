@@ -523,7 +523,47 @@ h1, h3 {
 }
 
 /* Clients Section */
+.facebook-page {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+}
 
+.facebook-page-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 2em;
+}
+
+.facebook-page-container h2 {
+ color: var(--font-light-blue);
+    border-bottom: 1px solid #4896e2;
+    padding: 1em;
+}
+
+.facebook-page-container a {
+    display: flex;
+    width: 250px;
+    height: auto;
+    flex: 0 1 auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0 1px #2b4273;
+    margin: 0 auto;
+}
+
+.facebook-page-container a:active {
+    box-shadow: none;
+    transition: 0.3s ease-in-out;
+    transform: translate(2px, 2px);
+}
+
+.facebook-page-container a img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 /* Pricing Section */
 .section-wrapper table {
